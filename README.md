@@ -48,6 +48,7 @@ Here is a sample config file with the default settings:
 ## Author
 
 * [Andrea Franz](http://gravityblast.com)
+* [Samlet Wu](xiaofei.wu@gmail.com)
 
 ## More
 

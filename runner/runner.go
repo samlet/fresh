@@ -8,7 +8,14 @@ import (
 func run() bool {
 	runnerLog("Running...")
 
-	cmd := exec.Command(buildPath())
+	var cmd *exec.Cmd
+	runType := runType()
+
+	if runType == "test" {
+		cmd = exec.Command("go", "test")
+	} else {
+		cmd = exec.Command(buildPath())
+	}
 
 	stderr, err := cmd.StderrPipe()
 	if err != nil {

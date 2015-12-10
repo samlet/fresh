@@ -30,6 +30,7 @@ var settings = map[string]string{
 	"log_color_runner":  "green",
 	"log_color_watcher": "magenta",
 	"log_color_app":     "",
+	"run_type":          "run",
 }
 
 var colors = map[string]string{
@@ -135,6 +136,13 @@ func buildErrorsFilePath() string {
 func configPath() string {
 	return settings["config_path"]
 }
+
+//+ add by samlet, at 2015.12.11
+func runType() string {
+	return settings["run_type"]
+}
+
+//+
 
 func buildDelay() time.Duration {
 	value, _ := strconv.Atoi(settings["build_delay"])
