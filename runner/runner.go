@@ -13,6 +13,8 @@ func run() bool {
 
 	if runType == "test" {
 		cmd = exec.Command("go", "test")
+	} else if runType == "python" {
+		cmd = exec.Command("python", "./runner.py")
 	} else {
 		cmd = exec.Command(buildPath())
 	}
